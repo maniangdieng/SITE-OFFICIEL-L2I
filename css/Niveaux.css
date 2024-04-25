@@ -1,0 +1,359 @@
+body {
+    margin: 0; /* Supprime les marges par défaut du body */
+}
+
+.presentation {
+    background-image: url('../img/im77.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto; 
+    
+    
+}
+.sommaire {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-image: url('../img/im10.jpg');
+    height: 530px;
+    display: flex;
+}
+.sommaire .left {
+    width: 60%; 
+}
+
+.sommaire .right {
+    width: 40%; 
+}
+
+.sommaire::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  /* Couleur du filtre noir (transparence réglable avec la dernière valeur) */
+}
+.section-title {
+    font-family: cursive;
+    font-size: 44px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    position: relative;
+    color: black;
+    
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    border-radius: 6px;
+    transition: width 0.5s;
+    background-color: #080808;
+}
+
+.section-title:hover::before {
+    width: 170px;
+}
+.container {
+    display: flex;
+    background-color: #0c0c0c;
+   
+}
+
+header {
+    display: flex; /* Alignement horizontal */
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between;
+    width: 100%;
+    height: 90px; /* Ajustez la hauteur selon vos besoins */
+    
+    padding: 0 20px; /* Ajoute un espacement intérieur */
+    flex-basis: 50%;
+    margin-left: 400px;
+    height:100px ;
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+}
+
+header .menu li {
+    margin: 0 15px;
+    list-style: none;
+}
+header .menu li a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white; /* Couleur de l'animation */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Animation de la largeur */
+    
+}
+header .menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    position: relative;
+    transition: 0.5s;
+    color:   #f8fcff;
+}
+
+header .menu li a:hover {
+    color:  #706666;
+    font-size: 18px;
+}
+
+header .menu li a::before {
+    position: absolute;
+    bottom: -5px;
+    content: "";
+    width: 0%;
+    height: 5px;
+    border-radius: 6px;
+    transition: 0.5s;
+    background-color: #97928e;
+}
+
+header .menu li a:hover::before {
+    width:100%;
+}
+
+.logo {
+    display: flex; /* Utilisation de Flexbox */
+    align-items: center; /* Alignement vertical */
+    margin-right: 20px; /* Ajout de marge à droite */
+    flex-basis: 50%;
+}
+
+.logo h2 {
+    margin-left: 10px; /* Espacement entre l'image et le texte */
+    color: #fff;
+}
+
+footer {
+    background-color: #0c0c0c;
+    padding: 20px 0;
+    position: relative; /* ou "absolute" selon vos besoins */
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    color: white;
+    height: 208px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    color: white;
+    font-size: 64px;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+
+h4{
+    color :rgb(170, 16, 16) ;
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+
+.ok{
+    font-size: 22px;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+   
+}
+
+
+
+.left1 {
+    width: 50%; /* Définit la largeur de la colonne de gauche */
+    padding: 0 20px; /* Ajoute un peu d'espace intérieur pour séparer le contenu du bord */
+   
+}
+
+.right1  {
+    width: 50%; /* Définit la largeur de la colonne de droite */
+    padding: 0 20px; /* Ajoute un peu d'espace intérieur pour séparer le contenu du bord */
+
+}
+.image-container {
+    display: inline-block;
+    max-width: 100%; /* Pour que l'image ne dépasse pas la taille de sa cellule parente */
+}
+
+.image-container img {
+    max-width: 100%; /* Pour que l'image occupe toute la largeur de son conteneur */
+    height: auto; /* La hauteur s'ajustera automatiquement pour maintenir les proportions de l'image */
+}
+
+th{
+    font-size: 30px;
+    font-family: cursive;
+}
+
+/* Style pour le bouton "Ajouter un enseignement" */
+button {
+    background-color:rgb(170, 16, 16);
+    color: rgb(255, 252, 252);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Style pour le formulaire */
+  #ajoutForm , #ajoutForm2 ,  #ajoutForm3 {
+    display: none;
+    margin-top: 20px;
+    margin: auto;
+    width: 50%;
+  }
+  
+  /* Style pour les étiquettes */
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Style pour les champs de saisie */
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Style pour le bouton "Ajouter" */
+  input[type="submit"] {
+    background-color: rgb(170, 16, 16);
+    color: rgb(12, 12, 12);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style pour le bouton "Annuler" */
+  input[type="reset"] {
+    background-color: rgb(170, 16, 16);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style pour le message d'erreur */
+  .error {
+    color: red;
+  }
+  
+  hr {
+    border: 3px solid #0c0c0c; /* Couleur et style du trait */
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 3px;
+}
+
+
+
+
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: rgb(3, 3, 3);
+    border: 2px solid rgb(7, 7, 7);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    margin-left: 30%;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(10, 10, 10);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover::before {
+    scale: 3;
+  }
+  
+  .button:hover {
+    color: #c0bdbd;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(8, 8, 8, 0.4);
+  }
+  
+  .button:active {
+    scale: 1;
+  }
+
+  .enseignant {
+    display: flex; /* Utiliser un layout en flexbox */
+    align-items: center; /* Centrer verticalement le contenu */
+}
+
+.enseignant img {
+    width: 50px; /* Ajuster la taille de la photo */
+    height: 50px;
+    border-radius: 50%; /* Appliquer une bordure arrondie à la photo */
+    margin-right: 10px; /* Ajouter un espace à droite de la photo */
+}
+
+
+ .ok {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+ .ok.active {
+    opacity: 1;
+    transform: translateY(0);
+}

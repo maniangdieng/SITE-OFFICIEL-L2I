@@ -1,0 +1,556 @@
+body {
+    margin: 0; /* Supprime les marges par défaut du body */
+}
+
+.presentation {
+    background-image: url('../img/im2.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 1200px; 
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+.container {
+    display: flex;
+}
+
+header {
+    display: flex; /* Alignement horizontal */
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between;
+    width: 100%;
+    height: 90px; /* Ajustez la hauteur selon vos besoins */
+    
+    padding: 0 20px; /* Ajoute un espacement intérieur */
+    flex-basis: 50%;
+    margin-left: 400px;
+    height:100px ;
+
+    
+}
+
+
+header .menu {
+    display: flex;
+    align-items: center;
+}
+
+header .menu li {
+    margin: 0 15px;
+    list-style: none;
+}
+header .menu li a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white; /* Couleur de l'animation */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Animation de la largeur */
+    
+}
+header .menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    position: relative;
+    transition: 0.5s;
+    color:   #f8fcff;
+}
+
+header .menu li a:hover {
+    color:  #706666;
+    font-size: 18px;
+}
+
+
+header .menu li a::before {
+    position: absolute;
+    bottom: -5px;
+    content: "";
+    width: 0%;
+    height: 5px;
+    border-radius: 6px;
+    transition: 0.5s;
+    background-color: #97928e;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    border-radius: 6px;
+    transition: width 0.5s;
+    background-color: #030303;
+}
+
+.section-title:hover::before {
+    width:45%;
+}
+
+header .menu li a:hover::before {
+    width:100%;
+}
+
+
+
+.logo {
+    display: flex; /* Utilisation de Flexbox */
+    align-items: center; /* Alignement vertical */
+    margin-right: 20px; /* Ajout de marge à droite */
+    flex-basis: 50%;
+}
+
+.logo h2 {
+    margin-left: 10px; /* Espacement entre l'image et le texte */
+    color: #fff;
+}
+
+footer {
+    background-color: #0c0c0c;
+    padding: 20px 0;
+    position: relative; /* ou "absolute" selon vos besoins */
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    color: white;
+    height: 208px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    color: white;
+    font-size: 64px;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+
+h1 {
+    font-family: "Crimson Text", serif;
+    font-size: 100px;
+    font-weight: bold; /* ou bold si nécessaire */
+    line-height: 1.2; /* ajuster si nécessaire */
+    color: #f5f5f5; /* couleur du texte */
+    text-align: center;
+    margin-top: 30px;
+    /* autres propriétés CSS personnalisables, si nécessaire */
+}
+
+.message{
+    background-color: rgba(240, 252, 252, 0.2); /* Couleur de fond avec une opacité très faible */
+    padding: 20px; /* Ajout de rembourrage pour l'espace autour du texte */
+    border-radius: 10px; /* Ajout d'un rayon de bordure pour un effet plus doux */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin-top: 510px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold; 
+    line-height: 1.2; 
+    color: #f5f5f5;
+   
+}
+.admission{
+   height: auto;
+}
+.section-title {
+    font-family: cursive;
+    font-size: 44px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    position: relative;
+    
+}
+.gauche{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    flex-basis: 50%;
+    margin-left: 15px;
+
+}
+.droite{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    flex-basis: 50%;
+    margin-left: 15px;
+}
+.admission-list .voir-condition {
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #57626d; /* Couleur du texte */
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold; /* Texte en gras */
+}
+
+.admission-list .voir-condition:hover {
+    color: #0056b3; /* Couleur du texte au survol */
+    text-decoration: underline; /* Souligner le texte au survol */
+}
+hr {
+    border: 3px solid #0c0c0c; /* Couleur et style du trait */
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 3px;
+}
+.gauche3, .milieu4, .droite5 {
+    flex: 1;
+    min-width: 0; /* Assurez-vous que les éléments peuvent rétrécir pour s'adapter à la taille de la fenêtre */
+    box-sizing: border-box; /* Inclure les bordures et les marges dans la largeur */
+    /* Juste pour visualiser les limites des sections */
+    padding: 40px;
+    text-align: center;
+}
+
+h4{
+    color : rgb(170, 16, 16);
+    font-size: 25px;
+}
+.ok{
+    font-size: 22px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+
+.section-title4{
+    font-family: cursive;
+    font-size: 44px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+h3 {
+    font-family: cursive;
+    font-size: 44px;
+    position: absolute;
+    margin-top: 380px;
+    margin-left: 0px;
+    color:white;
+    
+}
+
+.additional-info {
+    display: none;
+    color: white;
+}
+
+.container4 {
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Les éléments sont disposés verticalement */
+    background-color: #0c0c0c;
+    padding: 20px; /* Ajouter un padding pour l'espace autour du conteneur */
+}
+
+.gauche33, .milieu44, .droite55 {
+    flex: 1;
+    min-width: 0; /* Assurez-vous que les éléments peuvent rétrécir pour s'adapter à la taille de la fenêtre */
+    box-sizing: border-box; /* Inclure les bordures et les marges dans la largeur */
+    /* Juste pour visualiser les limites des sections */
+    padding: 40px;
+    text-align: center;
+    margin-top: 20px; /* Ajouter un espace entre les éléments */
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Diviser en trois colonnes égales */
+    gap: 20px; /* Espacement entre les éléments */
+    height:600px ;
+}
+
+
+
+
+.gauche33 {
+    background-image: url('../img/ma.jpg');
+    background-size: cover;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.milieu44 {
+    background-image: url('../img/ya.jpg');
+    background-size: cover;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.droite55 {
+    background-image: url('../img/ba.jpg');
+    background-size: cover;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+.student-info {
+    transition: transform 0.3s ease; /* Ajoute une transition douce sur la transformation */
+}
+
+.gauche33:hover {
+    transform: scale(1.1); 
+    opacity: 0.4;
+   
+}
+
+.milieu44:hover {
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+
+.droite55:hover {
+    transform: scale(1.1);
+    opacity: 0.4; 
+  
+}
+
+.additional-info{
+   
+    font-size: 34px;
+    position: absolute;
+    margin-top: 450px;
+    margin-left: 0px;
+    opacity: 1;
+    
+    
+}
+
+.section5{
+    height: 200px;
+    
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    z-index: 999; /* Assure que la fenêtre modale est au-dessus de tout */
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+   }
+   
+   button.learn-more {
+    font-weight: 600;
+    color: #382b22;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #fff0f0;
+    border: 2px solid #b18597;
+    border-radius: 0.75em;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+   }
+   
+   button.learn-more::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ebe7e8;
+    border-radius: inherit;
+    -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+    box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0.75em, -1em);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+   }
+   
+   button.learn-more:hover {
+    background: #a7a4a4;
+    -webkit-transform: translate(0, 0.25em);
+    transform: translate(0, 0.25em);
+   }
+   
+   button.learn-more:hover::before {
+    -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+    box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0.5em, -1em);
+    transform: translate3d(0, 0.5em, -1em);
+   }
+   
+   button.learn-more:active {
+    background: #030303;
+    -webkit-transform: translate(0em, 0.75em);
+    transform: translate(0em, 0.75em);
+   }
+   
+   button.learn-more:active::before {
+    -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0, -1em);
+    transform: translate3d(0, 0, -1em);
+   }
+
+
+   .section5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: auto;
+}
+
+.left, .right {
+    width: 45%; /* Ajustez la largeur selon vos besoins */
+}
+
+.left {
+    text-align: center;
+}
+
+.right {
+    text-align: center; /* Ajustez l'alignement du texte selon vos préférences */
+    margin-left: 240px;
+}
+
+
+
+.close-btn {
+    position: absolute;
+    bottom: 100px;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 10px 20px;
+    background-color: rgb(30, 46, 185); /* Couleur du bouton */
+    color: rgb(204, 203, 203); /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: rgb(3, 3, 3);
+    border: 2px solid rgb(7, 7, 7);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(10, 10, 10);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover::before {
+    scale: 3;
+  }
+  
+  .button:hover {
+    color: #c0bdbd;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(8, 8, 8, 0.4);
+  }
+  
+  .button:active {
+    scale: 1;
+  }
+  
+.waw{
+    font-family: cursive;
+    font-size: 40px;
+}
+
+
+
+.admission,
+
+.section5, .ok {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.admission.active,
+
+.section5.active, .ok.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.Debouche{
+    height: auto;
+}

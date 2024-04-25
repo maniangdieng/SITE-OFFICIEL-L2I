@@ -1,0 +1,410 @@
+body {
+    margin: 0; /* Supprime les marges par défaut du body */
+}
+.presentation{
+    background-image: url('../img/im23.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.sommaire {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 530px;
+    display: flex;
+}
+
+
+.sommaire::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  /* Couleur du filtre noir (transparence réglable avec la dernière valeur) */
+}
+.section-title {
+    font-family: cursive;
+    font-size: 44px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    position: relative;
+    color:white;
+    
+}
+.section-title1 {
+    font-family: cursive;
+    font-size: 35px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    position: relative;
+    color:#080808;
+    background-color: white;
+    
+}
+.section-title2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-top: 00px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    position: relative;
+    color:white;
+    background-color: black;
+    padding: auto;
+    
+}
+.section-title::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    border-radius: 6px;
+    transition: width 0.5s;
+    background-color: #080808;
+}
+
+.section-title:hover::before {
+    width: 530px;
+}
+.container {
+    display: flex;
+    
+}
+
+
+header {
+    display: flex; /* Alignement horizontal */
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between;
+    width: 100%;
+    height: 90px; /* Ajustez la hauteur selon vos besoins */
+    
+    padding: 0 20px; /* Ajoute un espacement intérieur */
+    flex-basis: 50%;
+    margin-left: 400px;
+    height:100px ;
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+}
+
+header .menu li {
+    margin: 0 15px;
+    list-style: none;
+}
+header .menu li a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white; /* Couleur de l'animation */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Animation de la largeur */
+    
+}
+header .menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    position: relative;
+    transition: 0.5s;
+    color:   #f8fcff;
+}
+
+header .menu li a:hover {
+    color:  #706666;
+    font-size: 18px;
+}
+
+header .menu li a::before {
+    position: absolute;
+    bottom: -5px;
+    content: "";
+    width: 0%;
+    height: 5px;
+    border-radius: 6px;
+    transition: 0.5s;
+    background-color: #97928e;
+}
+
+header .menu li a:hover::before {
+    width:100%;
+}
+
+.logo {
+    display: flex; /* Utilisation de Flexbox */
+    align-items: center; /* Alignement vertical */
+    margin-right: 20px; /* Ajout de marge à droite */
+    flex-basis: 50%;
+}
+
+.logo h2 {
+    margin-left: 10px; /* Espacement entre l'image et le texte */
+    color: #fff;
+}
+
+.s1{
+    height: 500px;
+    background-image: url('../img/im188.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+footer {
+    background-color: #0c0c0c;
+    padding: 20px 0;
+    position: relative; /* ou "absolute" selon vos besoins */
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    color: white;
+    height: 208px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.social-link {
+    color: white;
+    font-size: 64px;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.social-link1 {
+    color: white;
+    font-size: 20spx;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+
+.wrapper {
+    width: 100%; /* Pour occuper toute la largeur du conteneur */
+    overflow: hidden;
+    display: flex; /* Utilisation de Flexbox pour les éléments enfants */
+}
+
+.gauche33,
+.droite55,.milieu44 {
+    flex: 1; /* Pour que chaque élément occupe une part égale de l'espace disponible */
+    padding: 20px; /* Pour un espace autour des éléments */
+    border: 1px solid #0c0c0c; /* Pour visualiser les limites des blocs */
+    box-sizing: border-box; /* Pour inclure le padding dans la largeur et la hauteur */
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 120px;
+    height: 400px;
+    background-color:white;
+    padding-top: 0px;
+}
+
+.ss{
+        border: 3px solid #0c0c0c; /* Couleur et style du trait */
+        width: 100px;
+        border-radius: 3px;
+        margin-left: 1px;
+
+      
+}
+
+p{
+    font-size: 22px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: cursive;
+    
+   
+}
+.page:hover {
+    background-color: lightgrey; /* Changer la couleur de fond au survol */
+}
+
+.page h2.section-title1,
+.page hr.ss {
+    margin-top: 0px;
+    position: sticky; /* Rendre les titres et les lignes fixes */
+    top: 0; /* Les fixer en haut de la page */
+    background-color: white; /* Fond blanc pour les démarquer du contenu */
+    z-index: 1; /* Assurer qu'ils apparaissent au-dessus du contenu défilant */
+}
+
+.page {
+   
+    overflow-y: auto; /* Activer le défilement vertical */
+}
+
+.page .content {
+    padding-left: 0px;
+}
+
+/* Optionnel: styliser le défilement */
+.page::-webkit-scrollbar {
+    width: 10px;
+}
+
+.page::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+.gros{
+  margin-top: 400px;  
+  color: white;
+  background-color: black;
+  height: 100%;
+  width: 330px;
+  
+}
+.zz{
+    width: 100%;
+    display: flex;
+    background-color: whitesmoke;
+    height: 1300px;
+}
+.contacts{
+    
+    
+    flex: 1;
+    margin-left: 100px;
+    height: 560px;
+    margin-right: 0px;
+    margin-top: 110px;
+}
+
+.contact{
+    margin-top: 480px;
+   flex: 4;
+   margin-left: 0px;
+   height: 500px;
+}
+
+.orange {
+    color: #070707;
+  }
+  
+  .form-container {
+    
+    max-width: 700px;
+    margin: 30px;
+    background-color: black;
+    padding: 30px;
+    border-left: 5px solid #d83807;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+  }
+  
+  .heading {
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .form-container .form .input {
+    color: white;
+    width: 100%;
+    background-color:#001925;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+   
+    transition: all 0.2s ease-in-out;
+    border-left: 1px solid transparent;
+  }
+  
+  .form-container .form .input:focus {
+    border-left: 5px solid  #d83807;
+  }
+  
+  .form-container .form .textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color:#001925;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    resize: none;
+    max-height: 150px;
+    margin-bottom: 20px;
+    border-left: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-container .form .textarea:focus {
+    border-left: 5px solid #d83807;
+  }
+  
+  .form-container .form .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-container .form .button-container .send-button {
+    flex-basis: 70%;
+    background: #d83807;
+    padding: 10px;
+    color: #001925;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-container .form .button-container .send-button:hover {
+    background: transparent;
+    border: 1px solid #d83807;
+    color: #d83807;
+  }
+  
+  .form-container .form .button-container .reset-button-container {
+    filter: drop-shadow(1px 1px 0px #d83807);
+    flex-basis: 30%;
+  }
+  
+  .form-container .form .button-container .reset-button-container .reset-button {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    color: #d83807;
+    font-weight: bold;
+    background: #001925;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-container .form .button-container .reset-button-container .reset-button:hover {
+    background: #d83807;
+    color: #001925;
+  }
+  .error {
+    color: red;
+    font-size: 14px;
+  }
